@@ -67,7 +67,7 @@ const store = new Vuex.Store({
                 returnSecureToken: true
             }).then(function (response) {
                 commit("setToken", response.data.idToken);
-                dispatch("loginTimeOut", 60 * 1000);
+                dispatch("loginTimeOut", response.data.expiresIn * 1000);
                 return response.status;
             }).catch(function (error) {
                 return error.response.data.error.message;
