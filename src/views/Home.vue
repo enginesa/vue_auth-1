@@ -1,14 +1,12 @@
 <template>
-    <Navbar></Navbar>
+
+    <h1>ana sayfa</h1>
 </template>
 
 <script>
-    import Navbar from '../components/shared/Navbar';
 
     export default {
-        components:{
-            Navbar,
-        },
+        components: {},
 
     }
 </script>

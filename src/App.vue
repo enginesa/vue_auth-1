@@ -1,20 +1,23 @@
 <template>
-  <div id="app">
+    <div id="app">
+        <Navbar></Navbar>
+        <router-view></router-view>
 
-    <router-view></router-view>
 
-
-  </div>
+    </div>
 </template>
 
 <script>
-  // import Home from './views/Home'
-  export default {
-    components:{
-      // Home
-    },
-    created() {
-      console.log(this.$store.state);
+    // import Home from './views/Home'
+    import Navbar from "./components/shared/Navbar";
+
+    export default {
+        components: {
+            Navbar,
+
+        },
+        created() {
+            this.$store.dispatch("initApp");
+        }
     }
-  }
 </script>
